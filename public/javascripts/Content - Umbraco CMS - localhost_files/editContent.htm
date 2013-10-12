@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0049)http://localhost/umbraco/editContent.aspx?id=1101 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Edit content
+</title><link href="default.css" type="text/css" rel="stylesheet"><link href="style(1).css" type="text/css" rel="stylesheet"><link href="style(4).css" type="text/css" rel="stylesheet"><link href="style(5).css" type="text/css" rel="stylesheet"><link href="style(2).css" type="text/css" rel="stylesheet"><link href="datetimepicker.css" type="text/css" rel="stylesheet"><link href="style(6).css" type="text/css" rel="stylesheet"><script src="NamespaceManager.js" type="text/javascript"></script><script src="jquery.js" type="text/javascript"></script><script src="jqueryui.js" type="text/javascript"></script><script src="jquery.cookie.js" type="text/javascript"></script><script src="base2.js" type="text/javascript"></script><script src="UmbracoApplicationActions.js" type="text/javascript"></script><script src="UmbracoUtils.js" type="text/javascript"></script><script src="UmbracoClientManager.js" type="text/javascript"></script><script src="knockout.js" type="text/javascript"></script><script src="knockout.mapping.js" type="text/javascript"></script><script src="modal.js" type="text/javascript"></script><script src="default.js" type="text/javascript"></script><script src="jquery.hotkeys.js" type="text/javascript"></script><script src="javascript.js" type="text/javascript"></script><script src="timepicker.js" type="text/javascript"></script><script src="jquery.maskedinput-1.3.min.js" type="text/javascript"></script><script src="umbDateTimePicker.js" type="text/javascript"></script><script src="javascript(2).js" type="text/javascript"></script><script src="umbracoCheckKeys.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://localhost/umbraco_client/tinymce3/themes/umbraco/skins/umbraco/ui.css"><link rel="stylesheet" href="http://localhost/umbraco_client/tinymce3/plugins/inlinepopups/skins/umbraco/window.css"></head>
+<body class="umbracoPage" marginwidth="0" marginheight="0">
+    <form method="post" action="editContent.htm" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTcyNDI0MjE3MA9kFgJmD2QWAgIFEGRkFgICAw9kFgQCBw9kFgJmD2QWBGYPD2QWAh4Fc3R5bGUFEnRleHQtYWxpZ246Y2VudGVyOxYCAgIPZBYCZg9kFgJmD2QWAgIBD2QWAmYPZBYCAgEPZBYKAgEPDxYGHgVXaWR0aBsAAAAAAAA2QAEAAAAeBkhlaWdodBsAAAAAAAA3QAEAAAAeBF8hU0ICgAMWDh8ABQtib3JkZXI6MHB4Ox4FY2xhc3MFCmVkaXRvckljb24eC29uTW91c2VvdmVyBR90aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbk92ZXInHgpvbk1vdXNlb3V0BRt0aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbiceCW9uTW91c2V1cAUfdGhpcy5jbGFzc05hbWU9J2VkaXRvckljb25PdmVyJx4Lb25Nb3VzZURvd24FH3RoaXMuY2xhc3NOYW1lPSdlZGl0b3JJY29uRG93biceB29uQ2xpY2sFFWludm9rZVNhdmVIYW5kbGVycygpO2QCAg8PFgYfARsAAAAAAAA2QAEAAAAfAhsAAAAAAAA3QAEAAAAfAwKAAxYOHwAFC2JvcmRlcjowcHg7HwQFCmVkaXRvckljb24fBQUfdGhpcy5jbGFzc05hbWU9J2VkaXRvckljb25PdmVyJx8GBRt0aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbicfBwUfdGhpcy5jbGFzc05hbWU9J2VkaXRvckljb25PdmVyJx8IBR90aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbkRvd24nHwkFFWludm9rZVNhdmVIYW5kbGVycygpO2QCAw8PFgYfAhsAAAAAAAA1QAEAAAAeCEltYWdlVXJsBSp+L3VtYnJhY29fY2xpZW50L21lbnVpY29uL2ltYWdlcy9zcGxpdC5naWYfAwKAARYEHwAFC2JvcmRlcjowcHg7HwQFD2VkaXRvckljb25TcGxpdGQCBA8PFgIeDUFsdGVybmF0ZVRleHQFB1ByZXZpZXcWDh4FdGl0bGUFB1ByZXZpZXcfBAUKZWRpdG9ySWNvbh8FBR90aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbk92ZXInHwYFG3RoaXMuY2xhc3NOYW1lPSdlZGl0b3JJY29uJx8HBRt0aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbicfCAUudGhpcy5jbGFzc05hbWU9J2VkaXRvckljb25Eb3duJzsgcmV0dXJuIGZhbHNlOx8JBTh3aW5kb3cub3BlbignZGlhbG9ncy9wcmV2aWV3LmFzcHg/aWQ9MTEwMScsJ3VtYlByZXZpZXcnKWQCBQ8PFgYfAhsAAAAAAAA1QAEAAAAfCgUqfi91bWJyYWNvX2NsaWVudC9tZW51aWNvbi9pbWFnZXMvc3BsaXQuZ2lmHwMCgAEWBB8ABQtib3JkZXI6MHB4Ox8EBQ9lZGl0b3JJY29uU3BsaXRkAgEPD2QWAh8ABRJ0ZXh0LWFsaWduOmNlbnRlcjsWAgIFD2QWAmYPZBYCZg9kFgICAQ9kFgJmD2QWAgIBD2QWCAIBDw8WBh8BGwAAAAAAADZAAQAAAB8CGwAAAAAAADdAAQAAAB8DAoADFg4fAAULYm9yZGVyOjBweDsfBAUKZWRpdG9ySWNvbh8FBR90aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbk92ZXInHwYFG3RoaXMuY2xhc3NOYW1lPSdlZGl0b3JJY29uJx8HBR90aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbk92ZXInHwgFH3RoaXMuY2xhc3NOYW1lPSdlZGl0b3JJY29uRG93bicfCQUVaW52b2tlU2F2ZUhhbmRsZXJzKCk7ZAICDw8WBh8BGwAAAAAAADZAAQAAAB8CGwAAAAAAADdAAQAAAB8DAoADFg4fAAULYm9yZGVyOjBweDsfBAUKZWRpdG9ySWNvbh8FBR90aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbk92ZXInHwYFG3RoaXMuY2xhc3NOYW1lPSdlZGl0b3JJY29uJx8HBR90aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbk92ZXInHwgFH3RoaXMuY2xhc3NOYW1lPSdlZGl0b3JJY29uRG93bicfCQUVaW52b2tlU2F2ZUhhbmRsZXJzKCk7ZAIDDw8WBh8CGwAAAAAAADVAAQAAAB8KBSp+L3VtYnJhY29fY2xpZW50L21lbnVpY29uL2ltYWdlcy9zcGxpdC5naWYfAwKAARYEHwAFC2JvcmRlcjowcHg7HwQFD2VkaXRvckljb25TcGxpdGQCBA8PFgIfCwUHUHJldmlldxYOHwwFB1ByZXZpZXcfBAUKZWRpdG9ySWNvbh8FBR90aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbk92ZXInHwYFG3RoaXMuY2xhc3NOYW1lPSdlZGl0b3JJY29uJx8HBRt0aGlzLmNsYXNzTmFtZT0nZWRpdG9ySWNvbicfCAUudGhpcy5jbGFzc05hbWU9J2VkaXRvckljb25Eb3duJzsgcmV0dXJuIGZhbHNlOx8JBTh3aW5kb3cub3BlbignZGlhbG9ncy9wcmV2aWV3LmFzcHg/aWQ9MTEwMScsJ3VtYlByZXZpZXcnKWQCDQ8WAh4EVGV4dAVRdmFyIHVtYlBhZ2VJZCA9IDExMDE7CnZhciB1bWJWZXJzaW9uSWQgPSAnMmU2MDdiZGUtMDRjNC00NzAxLWFlOGMtMzA5M2RjNThmOWJjJzsKZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBAUjY3RsMDAkYm9keSRUYWJWaWV3MV90YWIwMWxheWVyX3NhdmUFJmN0bDAwJGJvZHkkVGFiVmlldzFfdGFiMDFsYXllcl9wdWJsaXNoBSNjdGwwMCRib2R5JFRhYlZpZXcxX3RhYjAybGF5ZXJfc2F2ZQUmY3RsMDAkYm9keSRUYWJWaWV3MV90YWIwMmxheWVyX3B1Ymxpc2gtncW1jSgCB915Fwa7MFocoShjij53X53NI4hvLinPVQ==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResource.axd" type="text/javascript"></script>
+
+
+<script src="tinymce3tinymceCompress.aspx" type="text/javascript"></script>
+<script src="ScriptResource(3).axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="ScriptResource(4).axd" type="text/javascript"></script>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    
+    
+    
+    
+    <table style="height: 38px; width: 371px; border: none 0px;" cellspacing="0" cellpadding="0" id="__controls">
+        <tbody><tr valign="top">
+            <td height="20">
+            </td>
+            <td>
+                <div id="body_TabView1" style="height: 866px; width: 1400px;">
+  <div class="header">
+      <ul>
+          <li id="body_TabView1_tab01" class="tabOn">
+              <a id="body_TabView1_tab01a" href="http://localhost/umbraco/editContent.aspx?id=1101#" onclick="setActiveTab(&#39;body_TabView1&#39;,&#39;body_TabView1_tab01&#39;,body_TabView1_tabs); return false;">
+                  <span><nobr>Content</nobr></span>
+              </a>
+          </li>
+          <li id="body_TabView1_tab02" class="tabOff">
+              <a id="body_TabView1_tab02a" href="http://localhost/umbraco/editContent.aspx?id=1101#" onclick="setActiveTab(&#39;body_TabView1&#39;,&#39;body_TabView1_tab02&#39;,body_TabView1_tabs); return false;">
+                  <span><nobr>Properties</nobr></span>
+              </a>
+          </li>
+      </ul>
+  </div>
+  <div id="" class="tabpagecontainer">
+<div id="body_TabView1_tab01layer" class="tabpage" style="display: block;">
+<div class="menubar">
+<span id="body_TabView1_tab01layer_menu" style="display: inline-block; width: 1370px;"><table id="body_TabView1_tab01layer_menu_tableContainer">
+	<tbody><tr id="body_TabView1_tab01layer_menu_tableContainerRow">
+		<td id="body_TabView1_tab01layer_menu_tableContainerLeft"><img class="editorArrow" align="absMiddle" onmouseout="this.className = &#39;editorArrow&#39;; scrollStop();" onmouseover="this.className = &#39;editorArrowOver&#39;; scrollR(&#39;body_TabView1_tab01layer_menu_sl&#39;,&#39;body_TabView1_tab01layer_menu_slh&#39;,1296);" src="arrawBack.gif" style="border-width:0px;height:20px;width:7px;"></td><td id="body_TabView1_tab01layer_menu_tableContainerButtons"><div id="body_TabView1_tab01layer_menu_slh" class="slh" style="height: 26px; width: 1370px;"><script>RegisterScrollingMenuButtons('body_TabView1_tab01layer_menu', 'TabView1_tab01layer_save,TabView1_tab01layer_publish,,,,,');</script><div id="body_TabView1_tab01layer_menu_sl" style="top:0px;left:0px;height:26px;width:1296px;" class="sl"><nobr id="body_TabView1_tab01layer_menu_nobr"></nobr><input type="image" name="ctl00$body$TabView1_tab01layer_save" id="body_TabView1_tab01layer_save" title="Save" class="editorIcon" onmouseover="this.className=&#39;editorIconOver&#39;" onmouseout="this.className=&#39;editorIcon&#39;" onmouseup="this.className=&#39;editorIconOver&#39;" onmousedown="this.className=&#39;editorIconDown&#39;" src="save.gif" alt="Save" onclick="invokeSaveHandlers();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$body$TabView1_tab01layer_save&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="height:23px;width:22px;border:0px;"><input type="image" name="ctl00$body$TabView1_tab01layer_publish" id="body_TabView1_tab01layer_publish" title="Save and publish" class="editorIcon" onmouseover="this.className=&#39;editorIconOver&#39;" onmouseout="this.className=&#39;editorIcon&#39;" onmouseup="this.className=&#39;editorIconOver&#39;" onmousedown="this.className=&#39;editorIconDown&#39;" src="saveAndPublish.gif" alt="Save and publish" onclick="invokeSaveHandlers();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$body$TabView1_tab01layer_publish&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="height:23px;width:22px;border:0px;"><img class="editorIconSplit" src="split.gif" style="height:21px;border:0px;"><img title="Preview" class="editorIcon" onmouseover="this.className=&#39;editorIconOver&#39;" onmouseout="this.className=&#39;editorIcon&#39;" onmouseup="this.className=&#39;editorIcon&#39;" onmousedown="this.className=&#39;editorIconDown&#39;; return false;" onclick="window.open(&#39;dialogs/preview.aspx?id=1101&#39;,&#39;umbPreview&#39;)" src="vis.gif" alt="Preview"><img class="editorIconSplit" src="split.gif" style="height:21px;border:0px;"><div class="tinymceMenuBar" id="umbTinymceMenu64" style="display: block;"><div id="body_prop_body_external" class="mceToolbarExternal umbracoSkin" style="display: block;"><table id="body_prop_body_tblext" cellspacing="0" cellpadding="0" style="margin-left: 10px"><tbody><tr role="presentation"><td class="mceToolbar mceLeft" role="presentation"><div id="body_prop_body_toolbargroup" role="group" aria-labelledby="body_prop_body_toolbargroup_voice" tabindex="-1"><span role="application"><span id="body_prop_body_toolbargroup_voice" class="mceVoiceLabel" style="display:none;">Toolbar</span><table id="body_prop_body_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" cellpadding="0" cellspacing="0" align="" role="presentation" tabindex="-1" aria-disabled="false" aria-pressed="false"><tbody><tr><td class="mceToolbarStart mceToolbarStartButton"><span><!-- IE --></span></td><td style="position: relative"><a role="button" id="body_prop_body_code" href="javascript:;" class="mceButton mceButtonEnabled mce_code" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_code_voice" title="Edit HTML Source" tabindex="-1"><span class="mceIcon mce_code"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_code_voice">Edit HTML Source</span></a></td><td style="position: relative"><span class="mceSeparator" role="separator" aria-orientation="vertical" tabindex="-1"></span></td><td style="position: relative"><a role="button" id="body_prop_body_undo" href="javascript:;" class="mceButton mce_undo mceButtonEnabled" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_undo_voice" title="Undo (Ctrl+Z)" tabindex="-1" aria-disabled="false"><span class="mceIcon mce_undo"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_undo_voice">Undo (Ctrl+Z)</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_redo" href="javascript:;" class="mceButton mce_redo mceButtonDisabled" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_redo_voice" title="Redo (Ctrl+Y)" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_redo"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_redo_voice">Redo (Ctrl+Y)</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_cut" href="javascript:;" class="mceButton mceButtonEnabled mce_cut" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_cut_voice" title="Cut (Ctrl+X)" tabindex="-1"><span class="mceIcon mce_cut"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_cut_voice">Cut (Ctrl+X)</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_copy" href="javascript:;" class="mceButton mceButtonEnabled mce_copy" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_copy_voice" title="Copy (Ctrl+C)" tabindex="-1"><span class="mceIcon mce_copy"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_copy_voice">Copy (Ctrl+C)</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_pasteword" href="javascript:;" class="mceButton mceButtonEnabled mce_pasteword" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_pasteword_voice" title="Paste from Word" tabindex="-1"><span class="mceIcon mce_pasteword"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_pasteword_voice">Paste from Word</span></a></td><td style="position: relative"><span class="mceSeparator" role="separator" aria-orientation="vertical" tabindex="-1"></span></td><td style="position: relative"><span role="listbox" aria-haspopup="true" aria-labelledby="body_prop_body_umbracostyles_voiceDesc" aria-describedby="body_prop_body_umbracostyles_voiceDesc"><table role="presentation" tabindex="-1" id="body_prop_body_umbracostyles" cellpadding="0" cellspacing="0" class="mceListBox mceListBoxEnabled mce_umbracostyles" aria-valuenow="Styles"><tbody><tr><td><span id="body_prop_body_umbracostyles_voiceDesc" class="voiceLabel" style="display:none;">Styles</span><a id="body_prop_body_umbracostyles_text" tabindex="-1" href="javascript:;" class="mceText mceTitle" onclick="return false;" onmousedown="return false;">Styles</a></td><td><a id="body_prop_body_umbracostyles_open" tabindex="-1" href="javascript:;" class="mceOpen" onclick="return false;" onmousedown="return false;"><span><span style="display:none;" class="mceIconOnly" aria-hidden="true">▼</span></span></a></td></tr></tbody></table></span></td><td class="mceToolbarStart"><span><!-- IE --></span></td><td style="position: relative"><a role="button" id="body_prop_body_bold" href="javascript:;" class="mceButton mceButtonEnabled mce_bold" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_bold_voice" title="Bold (Ctrl+B)" tabindex="-1"><span class="mceIcon mce_bold"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_bold_voice">Bold (Ctrl+B)</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_italic" href="javascript:;" class="mceButton mceButtonEnabled mce_italic" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_italic_voice" title="Italic (Ctrl+I)" tabindex="-1"><span class="mceIcon mce_italic"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_italic_voice">Italic (Ctrl+I)</span></a></td><td style="position: relative"><span class="mceSeparator" role="separator" aria-orientation="vertical" tabindex="-1"></span></td><td style="position: relative"><a role="button" id="body_prop_body_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_bullist_voice" title="Insert/Remove Bulleted List" tabindex="-1" aria-pressed="false"><span class="mceIcon mce_bullist"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_bullist_voice">Insert/Remove Bulleted List</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_numlist_voice" title="Insert/Remove Numbered List" tabindex="-1" aria-pressed="false"><span class="mceIcon mce_numlist"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_numlist_voice">Insert/Remove Numbered List</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_outdent" href="javascript:;" class="mceButton mce_outdent mceButtonDisabled" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_outdent_voice" title="Decrease Indent" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_outdent"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_outdent_voice">Decrease Indent</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_indent" href="javascript:;" class="mceButton mceButtonEnabled mce_indent" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_indent_voice" title="Increase Indent" tabindex="-1"><span class="mceIcon mce_indent"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_indent_voice">Increase Indent</span></a></td><td style="position: relative"><span class="mceSeparator" role="separator" aria-orientation="vertical" tabindex="-1"></span></td><td style="position: relative"><a role="button" id="body_prop_body_link" href="javascript:;" class="mceButton mce_link mceButtonDisabled" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_link_voice" title="Insert/Edit Link" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_link"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_link_voice">Insert/Edit Link</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_unlink" href="javascript:;" class="mceButton mce_unlink mceButtonDisabled" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_unlink_voice" title="Unlink" tabindex="-1" aria-disabled="true"><span class="mceIcon mce_unlink"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_unlink_voice">Unlink</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_anchor" href="javascript:;" class="mceButton mceButtonEnabled mce_anchor" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_anchor_voice" title="Insert/Edit Anchor" tabindex="-1"><span class="mceIcon mce_anchor"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_anchor_voice">Insert/Edit Anchor</span></a></td><td style="position: relative"><span class="mceSeparator" role="separator" aria-orientation="vertical" tabindex="-1"></span></td><td style="position: relative"><a role="button" id="body_prop_body_image" href="javascript:;" class="mceButton mceButtonEnabled mce_image" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_image_voice" title="Insert/Edit Image" tabindex="-1"><span class="mceIcon mce_image"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_image_voice">Insert/Edit Image</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_umbracomacro" href="javascript:;" class="mceButton mceButtonEnabled mce_umbracomacro" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_umbracomacro_voice" title="Insert macro" tabindex="-1" aria-pressed="false"><span class="mceIcon mce_umbracomacro"><img class="mceIcon" src="insMacro.gif" alt="Insert macro"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_umbracomacro_voice">Insert macro</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_table" href="javascript:;" class="mceButton mceButtonEnabled mce_table" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_table_voice" title="Insert/Edit Table" tabindex="-1"><span class="mceIcon mce_table"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_table_voice">Insert/Edit Table</span></a></td><td style="position: relative"><a role="button" id="body_prop_body_umbracoembed" href="javascript:;" class="mceButton mceButtonEnabled mce_umbracoembed" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_umbracoembed_voice" title="Embed third party media" tabindex="-1"><span class="mceIcon mce_umbracoembed"><img class="mceIcon" src="embed.gif" alt="Embed third party media"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_umbracoembed_voice">Embed third party media</span></a></td><td style="position: relative"><span class="mceSeparator" role="separator" aria-orientation="vertical" tabindex="-1"></span></td><td style="position: relative"><a role="button" id="body_prop_body_charmap" href="javascript:;" class="mceButton mceButtonEnabled mce_charmap" onmousedown="return false;" onclick="return false;" aria-labelledby="body_prop_body_charmap_voice" title="Insert Special Character" tabindex="-1"><span class="mceIcon mce_charmap"></span><span class="mceVoiceLabel mceIconOnly" style="display: none;" id="body_prop_body_charmap_voice">Insert Special Character</span></a></td><td class="mceToolbarEnd mceToolbarEndButton"><span><!-- IE --></span></td></tr></tbody></table></span></div><a href="http://localhost/umbraco/editContent.aspx?id=1101#" accesskey="z" title="Jump to tool buttons - Alt+Q, Jump to editor - Alt-Z, Jump to element path - Alt-X" onfocus="tinyMCE.getInstanceById(&#39;body_prop_body&#39;).focus();"><!-- IE --></a></td></tr></tbody></table></div></div></div></div></td><td id="body_TabView1_tab01layer_menu_tableContainerRight"><img class="editorArrow" align="absMiddle" onmouseout="this.className = &#39;editorArrow&#39;; scrollStop();" onmouseover="this.className = &#39;editorArrowOver&#39;; scrollL(&#39;body_TabView1_tab01layer_menu_sl&#39;,&#39;body_TabView1_tab01layer_menu_slh&#39;,1296);" src="arrowForward.gif" style="border-width:0px;height:20px;width:7px;"></td>
+	</tr>
+</tbody></table></span></div>
+<div class="tabpagescrollinglayer" id="body_TabView1_tab01layer_contentlayer" style="height: 799px; width: 1398px;">
+<div class="tabpageContent" style="text-align:center;">
+<div id="body_ctl00" style="padding: 0; position: relative;">
+	<div class="propertypane" style="">
+	<div>
+	<div class="propertyItem" style="">
+	<div class="propertyItemheader">Body</div>
+	<div class="propertyItemContent">
+	<textarea name="ctl00$body$prop_body" rows="2" cols="20" id="body_prop_body" class="tinymceContainer" style="visibility: hidden; display: none;" aria-hidden="true">&lt;p&gt;Access forbidden&lt;/p&gt;</textarea><span role="application" aria-labelledby="body_prop_body_voice" id="body_prop_body_parent" class="mceEditor umbracoSkin"><span class="mceVoiceLabel" style="display:none;" id="body_prop_body_voice">Rich Text Area</span><table role="presentation" id="body_prop_body_tbl" class="mceLayout" cellspacing="0" cellpadding="0" style="width: 500px; height: 400px;"><tbody><tr class="mceFirst mceLast"><td class="mceIframeContainer mceFirst mceLast"><iframe id="body_prop_body_ifr" src="javascript:""" frameborder="0" allowtransparency="true" title="Rich Text AreaPress ALT-F10 for toolbar. Press ALT-0 for help" style="width: 100%; height: 400px; display: block;"></iframe></td></tr></tbody></table></span><script type="text/javascript">
+tinyMCE.init({
+mode:'exact',
+theme:'umbraco',
+umbraco_path:'/umbraco',
+width:'500',
+height:'400',
+theme_umbraco_toolbar_location:'external',
+skin:'umbraco',
+inlinepopups_skin :'umbraco',
+plugins:'contextmenu,umbracomacro,umbracoembed,noneditable,inlinepopups,table,advlink,paste,spellchecker,umbracoimg,umbracocss,umbracopaste,umbracolink,umbracocontextmenu',
+umbraco_advancedMode:true,
+umbraco_maximumDefaultImageWidth:'500',
+language:'en',
+content_css:'',
+theme_umbraco_styles:'',
+theme_umbraco_buttons1:'code,separator,undo,redo,cut,copy,pasteword,separator,umbracocss,bold,italic,separator,bullist,numlist,outdent,indent,separator,link,unlink,anchor,separator,image,umbracomacro,table,umbracoembed,separator,charmap,',
+theme_umbraco_buttons2:'',
+theme_umbraco_buttons3:'',
+theme_umbraco_toolbar_align:'left',
+theme_umbraco_disable:'help,visualaid,justifycenter,justifyleft,strikethrough,removeformat,mcespellcheck,underline,subscript,justifyright,justifyfull,inserthorizontalrule,superscript',
+theme_umbraco_path :true,
+extended_valid_elements:'div[*]',
+document_base_url:'/',
+relative_urls:false,
+remove_script_host:true,
+event_elements:'div',
+paste_auto_cleanup_on_paste:true,
+valid_elements:'+a[id|style|rel|rev|charset|hreflang|dir|lang|tabindex|accesskey|type|name|href|target|title|class|onfocus|onblur|onclick|' + 
+'ondblclick|onmousedown|onmouseup|onmouseover|onmousemove|onmouseout|onkeypress|onkeydown|onkeyup],-strong/-b[class|style],-em/-i[class|style],' + 
+'-strike[class|style],-u[class|style],#p[id|style|dir|class|align],-ol[class|reversed|start|style|type],-ul[class|style],-li[class|style],br[class],' + 
+'img[id|dir|lang|longdesc|usemap|style|class|src|onmouseover|onmouseout|border|alt=|title|hspace|vspace|width|height|align|umbracoorgwidth|umbracoorgheight|onresize|onresizestart|onresizeend|rel],' + 
+'-sub[style|class],-sup[style|class],-blockquote[dir|style|class],-table[border=0|cellspacing|cellpadding|width|height|class|align|summary|style|dir|id|lang|bgcolor|background|bordercolor],' + 
+'-tr[id|lang|dir|class|rowspan|width|height|align|valign|style|bgcolor|background|bordercolor],tbody[id|class],' + 
+'thead[id|class],tfoot[id|class],#td[id|lang|dir|class|colspan|rowspan|width|height|align|valign|style|bgcolor|background|bordercolor|scope],' + 
+'-th[id|lang|dir|class|colspan|rowspan|width|height|align|valign|style|scope],caption[id|lang|dir|class|style],-div[id|dir|class|align|style],' + 
+'-span[class|align|style],-pre[class|align|style],address[class|align|style],-h1[id|dir|class|align],-h2[id|dir|class|align],' + 
+'-h3[id|dir|class|align],-h4[id|dir|class|align],-h5[id|dir|class|align],-h6[id|style|dir|class|align],hr[class|style],' + 
+'dd[id|class|title|style|dir|lang],dl[id|class|title|style|dir|lang],dt[id|class|title|style|dir|lang],object[class|id|width|height|codebase|*],' + 
+'param[name|value|_value|class],embed[type|width|height|src|class|*],map[name|class],area[shape|coords|href|alt|target|class],bdo[class],button[class],iframe[*]',
+invalid_elements:'font',
+spellchecker_rpc_url:'GoogleSpellChecker.ashx',
+entity_encoding:'raw',
+theme_umbraco_pageId:'1101',
+theme_umbraco_versionId:'2e607bde-04c4-4701-ae8c-3093dc58f9bc',
+umbraco_toolbar_id:'umbTinymceMenu64',
+elements:'body_prop_body'
+});
+</script></div>
+	</div>
+	<div class="propertyPaneFooter">-</div></div></div>
+
+</div></div>
+</div>
+</div>
+<div id="body_TabView1_tab02layer" class="tabpage" style="display: none;">
+<div class="menubar">
+<span id="body_TabView1_tab02layer_menu" style="display: inline-block; width: 1370px;"><table id="body_TabView1_tab02layer_menu_tableContainer">
+	<tbody><tr id="body_TabView1_tab02layer_menu_tableContainerRow">
+		<td id="body_TabView1_tab02layer_menu_tableContainerLeft"><img class="editorArrow" align="absMiddle" onmouseout="this.className = &#39;editorArrow&#39;; scrollStop();" onmouseover="this.className = &#39;editorArrowOver&#39;; scrollR(&#39;body_TabView1_tab02layer_menu_sl&#39;,&#39;body_TabView1_tab02layer_menu_slh&#39;,104);" src="arrawBack.gif" style="border-width:0px;height:20px;width:7px;"></td><td id="body_TabView1_tab02layer_menu_tableContainerButtons"><div id="body_TabView1_tab02layer_menu_slh" class="slh" style="height: 26px; width: 1370px;"><script>RegisterScrollingMenuButtons('body_TabView1_tab02layer_menu', 'TabView1_tab02layer_save,TabView1_tab02layer_publish,,,');</script><div id="body_TabView1_tab02layer_menu_sl" style="top:0px;left:0px;height:26px;width:104px;" class="sl"><nobr id="body_TabView1_tab02layer_menu_nobr"></nobr><input type="image" name="ctl00$body$TabView1_tab02layer_save" id="body_TabView1_tab02layer_save" title="Save" class="editorIcon" onmouseover="this.className=&#39;editorIconOver&#39;" onmouseout="this.className=&#39;editorIcon&#39;" onmouseup="this.className=&#39;editorIconOver&#39;" onmousedown="this.className=&#39;editorIconDown&#39;" src="save.gif" alt="Save" onclick="invokeSaveHandlers();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$body$TabView1_tab02layer_save&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="height:23px;width:22px;border:0px;"><input type="image" name="ctl00$body$TabView1_tab02layer_publish" id="body_TabView1_tab02layer_publish" title="Save and publish" class="editorIcon" onmouseover="this.className=&#39;editorIconOver&#39;" onmouseout="this.className=&#39;editorIcon&#39;" onmouseup="this.className=&#39;editorIconOver&#39;" onmousedown="this.className=&#39;editorIconDown&#39;" src="saveAndPublish.gif" alt="Save and publish" onclick="invokeSaveHandlers();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$body$TabView1_tab02layer_publish&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="height:23px;width:22px;border:0px;"><img class="editorIconSplit" src="split.gif" style="height:21px;border:0px;"><img title="Preview" class="editorIcon" onmouseover="this.className=&#39;editorIconOver&#39;" onmouseout="this.className=&#39;editorIcon&#39;" onmouseup="this.className=&#39;editorIcon&#39;" onmousedown="this.className=&#39;editorIconDown&#39;; return false;" onclick="window.open(&#39;dialogs/preview.aspx?id=1101&#39;,&#39;umbPreview&#39;)" src="vis.gif" alt="Preview"></div></div></td><td id="body_TabView1_tab02layer_menu_tableContainerRight"><img class="editorArrow" align="absMiddle" onmouseout="this.className = &#39;editorArrow&#39;; scrollStop();" onmouseover="this.className = &#39;editorArrowOver&#39;; scrollL(&#39;body_TabView1_tab02layer_menu_sl&#39;,&#39;body_TabView1_tab02layer_menu_slh&#39;,104);" src="arrowForward.gif" style="border-width:0px;height:20px;width:7px;"></td>
+	</tr>
+</tbody></table></span></div>
+<div class="tabpagescrollinglayer" id="body_TabView1_tab02layer_contentlayer" style="height: 799px; width: 1398px;">
+<div class="tabpageContent" style="text-align:center;">
+<div class="propertypane" style="">
+<div>
+<div class="propertyItem" style="">
+<div class="propertyItemheader">Name</div>
+<div class="propertyItemContent">
+<input name="ctl00$body$NameTxt" type="text" value="Forbidden" id="body_NameTxt"></div>
+</div>
+<div class="propertyItem" style="">
+<div class="propertyItemheader">Created by</div>
+<div class="propertyItemContent">
+admin</div>
+</div>
+<div class="propertyItem" style="">
+<div class="propertyItemheader">Created</div>
+<div class="propertyItemContent">
+25/09/2013 14:16:27</div>
+</div>
+<div class="propertyItem" style="">
+<div class="propertyItemheader">Id</div>
+<div class="propertyItemContent">
+1101</div>
+</div>
+<div class="propertyItem" style="">
+<div class="propertyItemheader">Document Type</div>
+<div class="propertyItemContent">
+GenericPage</div>
+</div>
+<div class="propertyItem" style="">
+<div class="propertyItemheader">Template</div>
+<div class="propertyItemContent">
+<select name="ctl00$body$ctl19">
+	<option value="">Choose...</option>
+	<option selected="selected" value="1098">GenericPage</option>
+
+</select></div>
+</div>
+<div class="propertyPaneFooter">-</div></div></div>
+<div class="propertypane" style="">
+<div>
+<div class="propertyItem" style="">
+<div class="propertyItemheader">Publication Status</div>
+<div class="propertyItemContent">
+Last published: 25/09/2013 &nbsp; <input type="submit" name="ctl00$body$UnPublishButton" value="Unpublish" onclick="if (!confirm(&#39;Are you sure?&#39;)) return false; ;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$body$UnPublishButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="body_UnPublishButton"></div>
+</div>
+<div class="propertyItem" style="">
+<div class="propertyItemheader">Last edited</div>
+<div class="propertyItemContent">
+25/09/2013 14:18</div>
+</div>
+<div class="propertyItem" style="">
+<div class="propertyItemheader">Publish at</div>
+<div class="propertyItemContent">
+<div class="umbDateTimePicker"><input name="ctl00$body$ctl27" type="text" id="body_ctl27" class="hasDatepicker"><button type="button" class="ui-datepicker-trigger"><span>Choose Date</span></button><div>No date chosen</div></div></div>
+</div>
+<div class="propertyItem" style="">
+<div class="propertyItemheader">Remove at</div>
+<div class="propertyItemContent">
+<div class="umbDateTimePicker"><input name="ctl00$body$ctl32" type="text" id="body_ctl32" class="hasDatepicker"><button type="button" class="ui-datepicker-trigger"><span>Choose Date</span></button><div>No date chosen</div></div></div>
+</div>
+<div class="propertyPaneFooter">-</div></div></div>
+<div class="propertypane" style="">
+<div>
+<div class="propertyItem" style="">
+<div class="propertyItemheader">Link to document</div>
+<div class="propertyItemContent">
+<a href="http://localhost/forbidden.aspx" target="_blank">/forbidden.aspx</a></div>
+</div>
+<div class="propertyPaneFooter">-</div></div></div>
+<div id="errorPane_body_TabView1_tab02layer" style="display: none; text-align: left; color: red;width: 100%; border: 1px solid red; background-color: #FCDEDE"><div><b>There were errors - data has not been saved!</b><br></div></div></div>
+</div>
+</div>
+	</div>
+	<div class="footer"><div class="status"><h2></h2></div></div>
+</div>
+<input type="hidden" name="body_TabView1_activetab" id="body_TabView1_activetab" value="body_TabView1_tab01">
+
+            </td>
+        </tr>
+    </tbody></table>
+    <input name="ctl00$body$doSave" type="hidden" id="body_doSave">
+    <input name="ctl00$body$doPublish" type="hidden" id="body_doPublish">
+    <script type="text/javascript">
+		// Save handlers for IDataFields		
+		var saveHandlers = new Array();
+		
+		// A hack to make sure that any javascript can access page id and version
+		var umbPageId = 1101;
+var umbVersionId = '2e607bde-04c4-4701-ae8c-3093dc58f9bc';
+
+		
+		// For short-cut keys
+		var isDialog = true;
+		var functionsFrame = this;
+		var disableEnterSubmit = true;
+		
+		function addSaveHandler(handler) {
+			saveHandlers[saveHandlers.length] = handler;
+		}		
+		
+		function invokeSaveHandlers() {
+			for (var i=0;i<saveHandlers.length;i++) {
+				eval(saveHandlers[i]);
+			}
+		}
+		
+		jQuery(function() {
+		    var inputs = $('#__controls input:not(.editorIcon), #__controls textarea');
+		    //Sys.Debug.traceDump(inputs);
+		    inputs.change(function() {
+		        UmbClientMgr.set_isDirty(true);
+		    });
+		    jQuery('input.editorIcon').click(function() { UmbClientMgr.set_isDirty(false); });
+		});
+
+        jQuery(document).ready(function () {
+            UmbClientMgr.appActions().bindSaveShortCut();
+        });
+    </script>
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+UmbClientMgr.mainTree().syncTree('-1,1101', false);;var body_TabView1_tabs = new Array("body_TabView1_tab01","body_TabView1_tab02");setActiveTab('body_TabView1','body_TabView1_tab01',body_TabView1_tabs);jQuery(document).ready(function(){resizeTabView(body_TabView1_tabs, 'body_TabView1'); }); jQuery(window).resize(function(){ resizeTabView(body_TabView1_tabs, 'body_TabView1'); });
+jQuery(document).ready(function() {  
+    jQuery('#body_ctl27').umbDateTimePicker(true,'Choose Date','No date chosen','Clear Date');jQuery('#body_ctl27').mask('9999-99-99 99:99');});
+jQuery(document).ready(function() {  
+    jQuery('#body_ctl32').umbDateTimePicker(true,'Choose Date','No date chosen','Clear Date');jQuery('#body_ctl32').mask('9999-99-99 99:99');});//]]>
+</script>
+</form>
+    
+    
+
+
+<div id="ui-timepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible" style="width: 100px; display: none; position: absolute;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><div class="ui-datepicker-title" style="margin:0"><span class="fragHours">08</span><span class="delim">:</span><span class="fragMinutes">45</span> <span class="fragAmpm"></span></div></div><table><tbody><tr><th>Hour</th><th>Minute</th></tr><tr><td align="center"><div id="hourSlider" class="slider ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-slider-range-min" style="height: 0%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="http://localhost/umbraco/editContent.aspx?id=1101#" style="bottom: 0%; padding: 0px;"></a></div></td><td align="center"><div id="minuteSlider" class="slider ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-slider-range-min" style="height: 0%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="http://localhost/umbraco/editContent.aspx?id=1101#" style="bottom: 0%; padding: 0px;"></a></div></td></tr></tbody></table></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>

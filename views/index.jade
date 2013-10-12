@@ -1,11 +1,27 @@
 extends layout
 block content
-	div(ng-controller='MapCtrl')
-		h3
-		p(style="width:510px;") Мышка тебе в помощь :)  Посмотри подходит или нет. Поиграй с картой.
-			| Для прикола щелкни на метке, адрес не уточнял, но идея, думаю,  понятна.
-			| Здесь с помощью кода можно настроить практически все.. и бесплатно.
-			| И даже есть детализация с точностью до строения. На гугле такого нету.
-			| Метку можно нарисовать как угодно - будет кружок с номером объявы.
-			| Готовую карту можно экспортировать в jpg, png, bmp ........
-		#map
+	div.content(ng-controller='MapCtrl')
+		p Введите адрес
+		span Город
+		input(ng-model='cityName'): br
+		span Адрес
+		input(ng-model='address', style="width:200px;margin-bottom:20px")
+		br
+		button(ng-click='add()') Определить координаты адреса и добавить его на карту
+		br
+		button(ng-click="generateMap()", style="margin-bottom:10px;") Тыцните для регенерации карты
+			ul
+				li(ng-repeat="point in points")
+					span(class='{{point.state}}')
+						| {{$index+1}}
+						| {{point.name}}
+						| {{point.location}}
+						span(class="remove",ng-click='remove(point)') [X]
+		div.mapContainer(style="width:{{mapWidth}}px; height: {{mapHeight}}px; ")
+			#map
+		h3 Размер карты, px
+		span Ширина
+		input(ng-model='width')
+		span Высота
+		input(ng-model='height')
+		button(ng-click="changeMapSize()") Установите размер карты

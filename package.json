@@ -9,6 +9,7 @@
     "express": "3.4.0",
     "jade": "*",
     "leaflet":"0.6.4",
-    "leaflet-image":"*"
+    "leaflet-image":"*",
+    "request":"*"
   }
 }

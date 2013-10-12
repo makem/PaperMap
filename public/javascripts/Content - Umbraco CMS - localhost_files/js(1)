@@ -1,0 +1,41 @@
+Type.registerNamespace('umbraco.presentation.webservices');
+umbraco.presentation.webservices.nodeSorter=function() {
+umbraco.presentation.webservices.nodeSorter.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+umbraco.presentation.webservices.nodeSorter.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return umbraco.presentation.webservices.nodeSorter._staticInstance.get_path();},
+GetNodes:function(ParentId,App,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetNodes',false,{ParentId:ParentId,App:App},succeededCallback,failedCallback,userContext); },
+UpdateSortOrder:function(ParentId,SortOrder,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'UpdateSortOrder',false,{ParentId:ParentId,SortOrder:SortOrder},succeededCallback,failedCallback,userContext); }}
+umbraco.presentation.webservices.nodeSorter.registerClass('umbraco.presentation.webservices.nodeSorter',Sys.Net.WebServiceProxy);
+umbraco.presentation.webservices.nodeSorter._staticInstance = new umbraco.presentation.webservices.nodeSorter();
+umbraco.presentation.webservices.nodeSorter.set_path = function(value) { umbraco.presentation.webservices.nodeSorter._staticInstance.set_path(value); }
+umbraco.presentation.webservices.nodeSorter.get_path = function() { return umbraco.presentation.webservices.nodeSorter._staticInstance.get_path(); }
+umbraco.presentation.webservices.nodeSorter.set_timeout = function(value) { umbraco.presentation.webservices.nodeSorter._staticInstance.set_timeout(value); }
+umbraco.presentation.webservices.nodeSorter.get_timeout = function() { return umbraco.presentation.webservices.nodeSorter._staticInstance.get_timeout(); }
+umbraco.presentation.webservices.nodeSorter.set_defaultUserContext = function(value) { umbraco.presentation.webservices.nodeSorter._staticInstance.set_defaultUserContext(value); }
+umbraco.presentation.webservices.nodeSorter.get_defaultUserContext = function() { return umbraco.presentation.webservices.nodeSorter._staticInstance.get_defaultUserContext(); }
+umbraco.presentation.webservices.nodeSorter.set_defaultSucceededCallback = function(value) { umbraco.presentation.webservices.nodeSorter._staticInstance.set_defaultSucceededCallback(value); }
+umbraco.presentation.webservices.nodeSorter.get_defaultSucceededCallback = function() { return umbraco.presentation.webservices.nodeSorter._staticInstance.get_defaultSucceededCallback(); }
+umbraco.presentation.webservices.nodeSorter.set_defaultFailedCallback = function(value) { umbraco.presentation.webservices.nodeSorter._staticInstance.set_defaultFailedCallback(value); }
+umbraco.presentation.webservices.nodeSorter.get_defaultFailedCallback = function() { return umbraco.presentation.webservices.nodeSorter._staticInstance.get_defaultFailedCallback(); }
+umbraco.presentation.webservices.nodeSorter.set_enableJsonp = function(value) { umbraco.presentation.webservices.nodeSorter._staticInstance.set_enableJsonp(value); }
+umbraco.presentation.webservices.nodeSorter.get_enableJsonp = function() { return umbraco.presentation.webservices.nodeSorter._staticInstance.get_enableJsonp(); }
+umbraco.presentation.webservices.nodeSorter.set_jsonpCallbackParameter = function(value) { umbraco.presentation.webservices.nodeSorter._staticInstance.set_jsonpCallbackParameter(value); }
+umbraco.presentation.webservices.nodeSorter.get_jsonpCallbackParameter = function() { return umbraco.presentation.webservices.nodeSorter._staticInstance.get_jsonpCallbackParameter(); }
+umbraco.presentation.webservices.nodeSorter.set_path("/umbraco/webservices/nodeSorter.asmx");
+umbraco.presentation.webservices.nodeSorter.GetNodes= function(ParentId,App,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.nodeSorter._staticInstance.GetNodes(ParentId,App,onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.nodeSorter.UpdateSortOrder= function(ParentId,SortOrder,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.nodeSorter._staticInstance.UpdateSortOrder(ParentId,SortOrder,onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+if (typeof(umbraco.presentation.webservices.SortNode) === 'undefined') {
+umbraco.presentation.webservices.SortNode=gtc("umbraco.presentation.webservices.SortNode");
+umbraco.presentation.webservices.SortNode.registerClass('umbraco.presentation.webservices.SortNode');
+}

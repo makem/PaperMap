@@ -1,0 +1,66 @@
+Type.registerNamespace('umbraco.presentation.webservices');
+umbraco.presentation.webservices.legacyAjaxCalls=function() {
+umbraco.presentation.webservices.legacyAjaxCalls.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+umbraco.presentation.webservices.legacyAjaxCalls.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.get_path();},
+ValidateUser:function(username,password,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'ValidateUser',false,{username:username,password:password},succeededCallback,failedCallback,userContext); },
+Delete:function(nodeId,alias,nodeType,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'Delete',false,{nodeId:nodeId,alias:alias,nodeType:nodeType},succeededCallback,failedCallback,userContext); },
+DeleteContentPermanently:function(nodeId,nodeType,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'DeleteContentPermanently',false,{nodeId:nodeId,nodeType:nodeType},succeededCallback,failedCallback,userContext); },
+DisableUser:function(userId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'DisableUser',false,{userId:userId},succeededCallback,failedCallback,userContext); },
+GetNodeName:function(nodeId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetNodeName',false,{nodeId:nodeId},succeededCallback,failedCallback,userContext); },
+GetNodeBreadcrumbs:function(nodeId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetNodeBreadcrumbs',false,{nodeId:nodeId},succeededCallback,failedCallback,userContext); },
+NiceUrl:function(nodeId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'NiceUrl',false,{nodeId:nodeId},succeededCallback,failedCallback,userContext); },
+ProgressStatus:function(Key,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'ProgressStatus',false,{Key:Key},succeededCallback,failedCallback,userContext); },
+RenewUmbracoSession:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'RenewUmbracoSession',false,{},succeededCallback,failedCallback,userContext); },
+GetSecondsBeforeUserLogout:function(succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetSecondsBeforeUserLogout',false,{},succeededCallback,failedCallback,userContext); },
+TemplateMasterPageContentContainer:function(templateId,masterTemplateId,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'TemplateMasterPageContentContainer',false,{templateId:templateId,masterTemplateId:masterTemplateId},succeededCallback,failedCallback,userContext); },
+SaveFile:function(fileName,fileAlias,fileContents,fileType,fileID,masterID,ignoreDebug,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'SaveFile',false,{fileName:fileName,fileAlias:fileAlias,fileContents:fileContents,fileType:fileType,fileID:fileID,masterID:masterID,ignoreDebug:ignoreDebug},succeededCallback,failedCallback,userContext); }}
+umbraco.presentation.webservices.legacyAjaxCalls.registerClass('umbraco.presentation.webservices.legacyAjaxCalls',Sys.Net.WebServiceProxy);
+umbraco.presentation.webservices.legacyAjaxCalls._staticInstance = new umbraco.presentation.webservices.legacyAjaxCalls();
+umbraco.presentation.webservices.legacyAjaxCalls.set_path = function(value) { umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.set_path(value); }
+umbraco.presentation.webservices.legacyAjaxCalls.get_path = function() { return umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.get_path(); }
+umbraco.presentation.webservices.legacyAjaxCalls.set_timeout = function(value) { umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.set_timeout(value); }
+umbraco.presentation.webservices.legacyAjaxCalls.get_timeout = function() { return umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.get_timeout(); }
+umbraco.presentation.webservices.legacyAjaxCalls.set_defaultUserContext = function(value) { umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.set_defaultUserContext(value); }
+umbraco.presentation.webservices.legacyAjaxCalls.get_defaultUserContext = function() { return umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.get_defaultUserContext(); }
+umbraco.presentation.webservices.legacyAjaxCalls.set_defaultSucceededCallback = function(value) { umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.set_defaultSucceededCallback(value); }
+umbraco.presentation.webservices.legacyAjaxCalls.get_defaultSucceededCallback = function() { return umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.get_defaultSucceededCallback(); }
+umbraco.presentation.webservices.legacyAjaxCalls.set_defaultFailedCallback = function(value) { umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.set_defaultFailedCallback(value); }
+umbraco.presentation.webservices.legacyAjaxCalls.get_defaultFailedCallback = function() { return umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.get_defaultFailedCallback(); }
+umbraco.presentation.webservices.legacyAjaxCalls.set_enableJsonp = function(value) { umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.set_enableJsonp(value); }
+umbraco.presentation.webservices.legacyAjaxCalls.get_enableJsonp = function() { return umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.get_enableJsonp(); }
+umbraco.presentation.webservices.legacyAjaxCalls.set_jsonpCallbackParameter = function(value) { umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.set_jsonpCallbackParameter(value); }
+umbraco.presentation.webservices.legacyAjaxCalls.get_jsonpCallbackParameter = function() { return umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.get_jsonpCallbackParameter(); }
+umbraco.presentation.webservices.legacyAjaxCalls.set_path("/umbraco/webservices/legacyAjaxCalls.asmx");
+umbraco.presentation.webservices.legacyAjaxCalls.ValidateUser= function(username,password,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.ValidateUser(username,password,onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.legacyAjaxCalls.Delete= function(nodeId,alias,nodeType,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.Delete(nodeId,alias,nodeType,onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.legacyAjaxCalls.DeleteContentPermanently= function(nodeId,nodeType,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.DeleteContentPermanently(nodeId,nodeType,onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.legacyAjaxCalls.DisableUser= function(userId,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.DisableUser(userId,onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.legacyAjaxCalls.GetNodeName= function(nodeId,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.GetNodeName(nodeId,onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.legacyAjaxCalls.GetNodeBreadcrumbs= function(nodeId,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.GetNodeBreadcrumbs(nodeId,onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.legacyAjaxCalls.NiceUrl= function(nodeId,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.NiceUrl(nodeId,onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.legacyAjaxCalls.ProgressStatus= function(Key,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.ProgressStatus(Key,onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.legacyAjaxCalls.RenewUmbracoSession= function(onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.RenewUmbracoSession(onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.legacyAjaxCalls.GetSecondsBeforeUserLogout= function(onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.GetSecondsBeforeUserLogout(onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.legacyAjaxCalls.TemplateMasterPageContentContainer= function(templateId,masterTemplateId,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.TemplateMasterPageContentContainer(templateId,masterTemplateId,onSuccess,onFailed,userContext); }
+umbraco.presentation.webservices.legacyAjaxCalls.SaveFile= function(fileName,fileAlias,fileContents,fileType,fileID,masterID,ignoreDebug,onSuccess,onFailed,userContext) {umbraco.presentation.webservices.legacyAjaxCalls._staticInstance.SaveFile(fileName,fileAlias,fileContents,fileType,fileID,masterID,ignoreDebug,onSuccess,onFailed,userContext); }
